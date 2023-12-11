@@ -19,7 +19,7 @@ import static org.hamcrest.Matchers.equalTo;
 
 public class APIWorkflowSteps {
 
-    String baseURI = RestAssured.baseURI = "http://hrm.syntaxtechs.net/syntaxapi/api";
+   // String baseURI = RestAssured.baseURI = "http://hrm.syntaxtechs.net/syntaxapi/api";
     public static String token;
     RequestSpecification request;
     Response response;
