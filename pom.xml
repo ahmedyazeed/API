@@ -92,7 +92,7 @@
                 <version>3.2.1</version>
                 <configuration>
                     <includes>
-                        <include>**/*RunnerClass.java</include>
+                        <include>**/*APIRunnerClass.java</include>
                     </includes>
                 </configuration>
             </plugin>
