@@ -44,8 +44,7 @@ public class CommonMethods extends PageInitializer {
 
 
     public static WebDriverWait getWait(){
-        WebDriverWait wait = new WebDriverWait(driver,
-                Duration.ofSeconds(Constants.EXPLICIT_WAIT));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(Constants.EXPLICIT_WAIT));
         return wait;
     }
 
@@ -93,12 +92,12 @@ public class CommonMethods extends PageInitializer {
         return picByte;
     }
 
-    //in java we have a module which returns current date and time
+    //in java, we have a module which returns current date and time
     public static String getTimeStamp(String pattern){
         Date date = new Date();
         //after getting the date, I need to format it as per my requirement
         SimpleDateFormat sdf = new SimpleDateFormat(pattern);
-        //it willl return the formatted date as per the pattern in string format
+        //it will return the formatted date as per the pattern in string format
         return sdf.format(date);
     }
 }
