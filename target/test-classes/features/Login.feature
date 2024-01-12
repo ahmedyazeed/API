@@ -1,6 +1,6 @@
 Feature: Login scenarios
 
-  @order(1) @sprint1 @regression @test123
+  @sprint1 @regression @test123
   Scenario: Valid admin login
     #Given user is navigated to HRMS application
     When user enters admin username and password

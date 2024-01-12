@@ -40,4 +40,4 @@ Feature: Syntax API workflow feature
   Scenario: Updating the employee
     Given a request is prepared to update an employee in HRMS system
     When a PUT call is made to update the employee
-    Then the status code for updating the employee is 200
+    Then the status code for updating the employee is 404

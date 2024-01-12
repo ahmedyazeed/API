@@ -5,7 +5,9 @@ import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -23,9 +25,15 @@ public class CommonMethods extends PageInitializer {
         ConfigReader.readProperties(Constants.CONFIGURATION_FILEPATH);
         switch (ConfigReader.getPropertyValue("browser")){
             case "Chrome":
-                driver = new ChromeDriver();
+                //silent run
+                ChromeOptions cp=new ChromeOptions();
+                cp.setHeadless(false);
+                driver = new ChromeDriver(cp);
                 break;
             case "firefox":
+                //silent run
+                FirefoxOptions fo=new FirefoxOptions();
+                fo.setHeadless(false);
                 driver = new FirefoxDriver();
                 break;
             default:
